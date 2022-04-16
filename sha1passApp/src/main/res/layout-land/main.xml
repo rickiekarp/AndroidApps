@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" android:weightSum="1">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" android:layout_weight="1.12">
+            <TextView android:id="@+id/textView" android:layout_width="fill_parent" android:text="Sentence: "
+                      android:layout_height="wrap_content" android:textSize="18dp"/>
+            <EditText android:id="@+id/editText1" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" android:layout_marginTop="10dp">
+                <Button android:text="Hex" android:id="@+id/hexBtn" android:layout_width="wrap_content" android:layout_height="match_parent"
+                        android:layout_weight="0.5" android:layout_row="0" android:layout_column="0"
+                        ></Button>
+                <Button android:text="Hex Half" android:id="@+id/hexHalfBtn" android:layout_width="wrap_content" android:layout_height="match_parent"
+                        android:layout_row="0" android:layout_column="1"
+                        android:layout_weight="0.5"></Button>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                <Button android:text="B64" android:id="@+id/b64Btn" android:layout_width="wrap_content" android:layout_height="match_parent"
+                        android:layout_weight="0.5" android:layout_row="1" android:layout_column="0"
+                        ></Button>
+                <Button android:text="B64 Half" android:id="@+id/b64HalfBtn" android:layout_width="wrap_content" android:layout_height="match_parent"
+                        android:layout_row="1" android:layout_column="1" android:layout_columnSpan="1"
+                        android:layout_weight="0.5"></Button>
+            </LinearLayout>
+            <EditText android:id="@+id/editText2" android:layout_width="match_parent" android:text="Peek" android:layout_height="wrap_content"
+                      android:layout_gravity="bottom" android:focusableInTouchMode="true"
+                      android:focusable="false" android:layout_marginTop="20dp"></EditText>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="250dp" android:weightSum="1" android:orientation="vertical">
+            <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="View"
+                    android:id="@+id/viewMode" android:checked="false"
+                    android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:layout_marginTop="30dp"
+                    />
+            <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Secure mode"
+                    android:id="@+id/secureMode" android:checked="false" android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"/>
+            <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="HMAC"
+                    android:id="@+id/hmacMode" android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:checked="false"/>
+            <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Complex"
+                    android:id="@+id/complexMode" android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp" android:checked="false"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

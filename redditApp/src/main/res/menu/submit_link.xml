@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/MAIN_MENU">
+        <item android:id="@+id/pick_subreddit_menu_id"
+            android:title="@string/pick_subreddit"
+            android:icon="@drawable/ic_menu_alien" />
+        <item android:id="@+id/update_captcha_menu_id"
+            android:title="@string/update_captcha"
+            android:icon="@drawable/ic_menu_refresh" />
+    </group>
+</menu>
+ 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              >
+              
+    <!-- Comment Indentation: set background color to desired line color -->
+    <View android:id="@+id/left_indent1"
+    	android:layout_width="1dp"
+    	android:layout_height="fill_parent"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="4dp"
+    	/>
+    <View android:id="@+id/left_indent2"
+    	android:layout_width="1dp"
+    	android:layout_height="fill_parent"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="4dp"
+    	/>
+    <View android:id="@+id/left_indent3"
+    	android:layout_width="1dp"
+    	android:layout_height="fill_parent"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="4dp"
+    	/>
+    <View android:id="@+id/left_indent4"
+    	android:layout_width="1dp"
+    	android:layout_height="fill_parent"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="4dp"
+    	/>
+    <View android:id="@+id/left_indent5"
+    	android:layout_width="1dp"
+    	android:layout_height="fill_parent"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="4dp"
+    	/>
+    <View android:id="@+id/left_indent6"
+    	android:layout_width="1dp"
+    	android:layout_height="fill_parent"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="4dp"
+    	/>
+    <View android:id="@+id/left_indent7"
+    	android:layout_width="1dp"
+    	android:layout_height="fill_parent"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="4dp"
+    	/>
+    <View android:id="@+id/left_indent8"
+    	android:layout_width="1dp"
+    	android:layout_height="fill_parent"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="4dp"
+    	/>
+    
+    <TextView android:id="@+id/more_comments_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/more_comments"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        android:textColor="@color/markdown_link_color"
+        />
+    
+</LinearLayout>

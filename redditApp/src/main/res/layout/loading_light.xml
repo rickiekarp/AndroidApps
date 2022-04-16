@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res/net.rickiekarp.reddit"
+		android:id="@+id/loading_light"
+		android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:background="@color/white">
+	
+	<ImageView android:id="@+id/loading_splash_image"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:src="@drawable/reddit_alien"
+		/>
+		
+	<TextView android:id="@+id/loading_splash_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        
+      	android:singleLine="true"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="@string/loading_splash_text"
+	    />
+	    
+</LinearLayout>

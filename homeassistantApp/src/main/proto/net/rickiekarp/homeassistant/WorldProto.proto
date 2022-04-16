@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "net.rickiekarp.homeassistant.domain";
+option java_outer_classname = "WorldProtos";
+option java_multiple_files = true;
+
+message World {
+    int32 id = 1;
+    string name = 2;
+    string url = 3;
+    int32 worldstatusid = 4;
+}
+
+message WorldList {
+    repeated World world = 1;
+}

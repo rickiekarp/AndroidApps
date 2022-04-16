@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/container"
+             android:orientation="vertical"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:weightSum="1">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_marginLeft="3dp" android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp" android:layout_marginBottom="0dp">
+        <TextView android:id="@+id/textView1" android:layout_width="fill_parent" android:text="Sentence: " android:layout_height="wrap_content"
+                  android:textSize="18dp"></TextView>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatEditText android:id="@+id/editText1" android:layout_width="wrap_content"
+                      android:layout_height="50dp" android:layout_weight="1"/>
+        </TableRow>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            <android.support.v7.widget.AppCompatButton android:text="Hex" android:id="@+id/hexBtn" android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:layout_weight="0.35" android:layout_row="0" android:layout_column="0"
+            ></android.support.v7.widget.AppCompatButton>
+            <android.support.v7.widget.AppCompatButton android:text="Hex Half" android:id="@+id/hexHalfBtn" android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:layout_row="0" android:layout_column="1"
+                    android:layout_weight="0.35"></android.support.v7.widget.AppCompatButton>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            <android.support.v7.widget.AppCompatButton android:text="B64" android:id="@+id/b64Btn" android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:layout_weight="0.35" android:layout_row="1" android:layout_column="0"
+            ></android.support.v7.widget.AppCompatButton>
+            <android.support.v7.widget.AppCompatButton android:text="B64 Half" android:id="@+id/b64HalfBtn" android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:layout_row="1" android:layout_column="1" android:layout_columnSpan="1"
+                    android:layout_weight="0.35"></android.support.v7.widget.AppCompatButton>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="250dp" android:weightSum="1" android:orientation="vertical"
+                android:paddingTop="10dp">
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Preferences:"
+                    android:id="@+id/textView4" android:textSize="18dp"/>
+            <android.support.v7.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="View"
+                    android:id="@+id/viewMode" android:checked="false"
+                    android:layout_marginLeft="40dp" android:layout_marginRight="40dp"
+            />
+            <android.support.v7.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Secure mode"
+                    android:id="@+id/secureMode" android:checked="false" android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"/>
+            <android.support.v7.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="HMAC"
+                    android:id="@+id/hmacMode" android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:checked="false"/>
+            <android.support.v7.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Complex"
+                    android:id="@+id/complexMode" android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp" android:checked="false"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="bottom" android:layout_margin="5dp">
+        <android.support.v7.widget.AppCompatEditText android:id="@+id/editText2" android:layout_width="wrap_content" android:text="Peek" android:layout_height="wrap_content"
+                  android:layout_weight="1" android:layout_gravity="bottom" android:focusableInTouchMode="true"
+                  android:focusable="false"></android.support.v7.widget.AppCompatEditText>
+    </LinearLayout>
+</FrameLayout>

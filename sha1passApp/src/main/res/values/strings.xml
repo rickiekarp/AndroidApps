@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SHA1 Pass</string>
+    <string name="description">A sentence based password generation program.\nEnter a sentence and a word, then click an
+        encoding button to generate a strong, secure password based on your input.\nUse different sentences and words to
+        generate different passwords.\n\n© 2014–2015 Rickie Karp</string>
+
+    <string name="navHeader">Menu</string>
+    <string name="settings">Settings</string>
+    <string name="info">Info</string>
+    <string name="about">About</string>
+
+    <string name="pref">About</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>
+

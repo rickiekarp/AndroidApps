@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.protobuf'
+
+android {
+    def applicationBaseId = "net.rickiekarp.homeassistant"
+    def versionBaseName = "1.0"
+    flavorDimensions "default"
+    defaultConfig {
+        applicationId "${applicationBaseId}p"
+        minSdkVersion 21
+        compileSdkVersion 29
+        targetSdkVersion 29
+        versionCode 1
+        versionName "${versionBaseName}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        production {
+            applicationId "${applicationBaseId}"
+
+            // authority
+            resValue "string", "provider_authority", "\"${applicationId}.data\""
+            buildConfigField "String", "PROVIDER_AUTHORITY", "\"${applicationId}.data\""
+            buildConfigField "String", "FILEPROVIDER_AUTHORITY", "\"net.rickiekarp.fileprovider\""
+            resValue "string", "fileprovider_authority", "\"net.rickiekarp.fileprovider\""
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //Server communication
+    implementation "com.squareup.okhttp3:okhttp:4.9.1"
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-protobuf:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
+    implementation 'com.android.support:cardview-v7:28.0.0'
+// You need to depend on the lite runtime library, not protobuf-java
+}
+
+protobuf {
+    protoc {
+        // You still need protoc like in the non-Android case
+        artifact = 'com.google.protobuf:protoc:3.0.0'
+    }
+    plugins {
+        javalite {
+            // The codegen for lite comes as a separate artifact
+            artifact = 'com.google.protobuf:protoc-gen-javalite:3.0.0'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                // In most cases you don't need the full Java output
+                // if you use the lite output.
+                remove java
+            }
+            task.plugins {
+                javalite { }
+            }
+        }
+    }
+}

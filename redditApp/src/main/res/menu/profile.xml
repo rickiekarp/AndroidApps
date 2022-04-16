@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/MAIN_MENU">
+        <item android:id="@+id/compose_message_menu_id"
+            android:title="@string/compose_message"
+            android:icon="@drawable/ic_menu_compose" />
+        <item android:id="@+id/saved_menu_id"
+            android:title="@string/view_saved_posts" />
+        <item android:id="@+id/refresh_menu_id"
+            android:title="@string/refresh"
+            android:icon="@drawable/ic_menu_refresh" />
+    </group>
+</menu>
+ 

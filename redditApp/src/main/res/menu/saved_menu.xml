@@ -1,0 +1,10 @@
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <group android:id="@+id/SAVED_MENU"><item android:id="@id/user_profile_menu_id" android:title="@string/user_profile"></item>
+            <item android:id="@id/light_dark_menu_id"></item>
+            
+            <item android:id="@id/preferences_menu_id" android:title="@string/menu_preferences"></item>
+        </group>
+        <item android:id="@id/light_menu_id" android:title="@string/light_theme" android:enabled="false" android:visible="false">
+        </item>
+        <item android:id="@id/dark_menu_id" android:title="@string/dark_theme" android:enabled="false" android:visible="false"></item>
+    </menu>

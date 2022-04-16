@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/savedcommentslv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:drawable/divider_horizontal_dark"
+        tools:listitem="@android:layout/simple_list_item_1" >
+
+    </ListView>
+    
+</LinearLayout>
